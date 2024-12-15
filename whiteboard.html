@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusBox - Whiteboard</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/whiteboard.css">
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <!-- Logo Section -->
+        <a href="index.html">
+          <img src="img/focusbox.png" alt="FocusBox Logo" class="nav-logo">
+        </a>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Domů</a>
+        <a href="todo.html">To-Do List</a>
+        <a href="whiteboard.html">Whiteboard</a>
+        <a href="login.html">Přihlášení</a>
+        <a href="register.html">Registrace</a>
+    </div>
+</div>
+    
+    <main>
+        <div class="add-column">
+            <input type="text" id="columnInput" placeholder="Název sloupce">
+            <button class="btn-primary" onclick="addColumn()">Přidat sloupec</button>
+        </div>
+        <div class="board" id="board"></div>
+        <div class="tag-dialog" id="tagDialog">
+            <h2>Přidat nebo vybrat tag</h2>
+            <input type="text" id="tagName" placeholder="Název tagu">
+            <input type="color" id="tagColor" value="#ff0000">
+            <div class="tag-dialog-actions">
+                <button class="btn-primary" onclick="createTag()">Vytvořit tag</button>
+                <button class="btn-secondary" onclick="closeTagDialog()">Zavřít</button>
+            </div>
+            <div class="tag-list" id="tagList"></div>
+        </div>
+        <script src="scripts/whiteboard.js"></script>
+        <script src="scripts/navbar.js"></script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to bottom, #eceff1, #90caf9); /* Jemný pastelový přechod */
+    background-attachment: fixed; /* Zajistí, že gradient pokrývá celou stránku */
+    background-size: cover; /* Přizpůsobí velikost gradientu tak, aby se neopakoval */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #3f51b5;
+}
+
+.add-column {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-column input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.btn-primary {
+    background: #3f51b5;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background: #283593;
+}
+
+.btn-secondary {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.column {
+    width: 200px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.column h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.cards {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    background: #f3f4f6;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+.tag-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Skrytí dialogu */
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.tag-dialog.active {
+    display: flex; /* Zobrazení dialogu při aktivaci */
+}
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+    .board {
+        gap: 15px;
+    }
+
+    .column {
+        width: 150px;
+    }
+
+    .cards .card {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+    }
+}

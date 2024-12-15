@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusBox - To-Do List</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <!-- Logo Section -->
+        <a href="index.html">
+          <img src="img/focusbox.png" alt="FocusBox Logo" class="nav-logo">
+        </a>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Domů</a>
+        <a href="todo.html">To-Do List</a>
+        <a href="whiteboard.html">Whiteboard</a>
+        <a href="login.html">Přihlášení</a>
+        <a href="register.html">Registrace</a>
+    </div>
+</div>
+    
+    
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Nový úkol...">
+            <button id="addTaskBtn">Přidat</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="scripts/todo.js"></script>
+    <script src="scripts/navbar.js"></script>
+</body>
+</html>
