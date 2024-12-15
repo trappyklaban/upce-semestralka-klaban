@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #eceff1, #90caf9); /* Jemný pastelový přechod */
-    background-attachment: fixed; /* Zajistí, že gradient pokrývá celou stránku */
-    background-size: cover; /* Přizpůsobí velikost gradientu tak, aby se neopakoval */
+    background: white;
     margin: 0;
     padding: 0;
     color: #333;
