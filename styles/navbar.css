@@ -7,33 +7,23 @@
     font-family: 'segoe ui';
   }
   
-  /* Logo Styling */
   .nav-logo {
-    height: 100px; /* Adjust height for appropriate size */
+    height: 120px; 
     width: auto;
     display: inline-block;
     vertical-align: middle;
     margin: 5px 10px;
-    border-radius: 5px; /* Optional, adds smooth edges to the logo */
-}
-
-/* Optional Title Styling */
-.nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-  vertical-align: middle;
+    border-radius: 5px; 
 }
 
 
 .nav {
-  height: 60px; /* Increase navbar height for better logo alignment */
+  height: 80px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  background-color: #3f51b5;
+  background-color: #7abdf3;
   position: relative;
 }
   
@@ -62,7 +52,7 @@
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #efefef;
+    color: black;
   }
   
   .nav > .nav-links > a:hover {
@@ -73,7 +63,25 @@
     display: none;
   }
   
+  @media (max-width: 768px) {
+    .nav {
+        height: 120px; /* Snížená výška navbaru */
+    }
+
+    .nav-logo {
+        height: 100px; /* Menší logo pro středně velké obrazovky */
+    }
+}
+
   @media (max-width:600px) {
+    .nav {
+      height: 80px; /* Menší výška navbaru */
+  }
+
+  .nav-logo {
+      height: 60px; /* Ještě menší logo pro mobilní zařízení */
+      margin: 3px 8px; /* Menší okraje */
+  }
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -99,7 +107,7 @@
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #3f51b5;
+      background-color: #7abdf3;
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
