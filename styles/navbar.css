@@ -1,128 +1,119 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0px;
-    font-family: 'segoe ui';
-  }
-  
-  .nav-logo {
-    height: 120px; 
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px 10px;
-    border-radius: 5px; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.nav {
-  height: 80px; 
+nav {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  background-color: white;
-  position: relative;
-}
-  
-  .nav > .nav-header {
-    display: inline;
-  }
-  
-  .nav > .nav-header > .nav-title {
-    display: inline-block;
-    font-size: 22px;
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-  }
-  
-  .nav > .nav-btn {
-    display: none;
-  }
-  
-  .nav > .nav-links {
-    display: inline;
-    float: right;
-    font-size: 18px;
-  }
-  
-  .nav > .nav-links > a {
-    display: inline-block;
-    padding: 13px 10px 13px 10px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .nav > #nav-check {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .nav {
-        height: 120px;
-    }
-
-    .nav-logo {
-        height: 100px;
-    }
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  left: 0;  /* Ujistíme se, že navbar bude u levého okraje */
+  right: 0; 
+  width: 100%; 
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-  @media (max-width:600px) {
-    .nav {
-      height: 80px;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #babdf5;
+}
+
+.login-button {
+  background: #babdf5;
+  color: #4e54c8;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background: #fff;
+  color: #4e54c8;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(90deg, #4e54c8, #8f94fb);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-logo {
-      height: 60px;
-      margin: 3px 8px;
+  .nav-links.active {
+      display: flex;
+      animation: slideIn 0.3s ease-in-out;
   }
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid #eee;
-    }
-    .nav > .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: white;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    }
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    }
+
+  .menu-toggle {
+      display: flex;
   }
+
+  .login-button {
+      margin-top: 1rem;
+      text-align: center;
+  }
+}
+
+.nav-links.active {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

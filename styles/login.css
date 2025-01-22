@@ -49,20 +49,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.back-link {
-    display: block;
-    margin-bottom: 15px;
-    color: #42a5f5;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.back-link:hover {
-    text-decoration: underline;
-}
-
-
+/* Breakpoints */
 @media (max-width: 1024px) {
     .form-container {
         width: 80%;

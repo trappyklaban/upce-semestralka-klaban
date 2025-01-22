@@ -6,69 +6,95 @@
     <title>FocusBox - Úvod</title>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/home.css">
+    <script src="https://kit.fontawesome.com/ce0b3e17eb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <!-- Logo Section -->
-            <a href="index.html">
-                <img src="img/focusbox.png" alt="FocusBox Logo" class="nav-logo">
-            </a>
+    <nav>
+        <div class="logo">FocusBox</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
             <a href="index.html">Domů</a>
-            <a href="todo.html">To-Do List</a>
+            <a href="todo.html">To-do list</a>
             <a href="whiteboard.html">Whiteboard</a>
-            <a href="login.html">Přihlášení</a>
-            <a href="register.html">Registrace</a>
+            <a href="login.html" class="login-button">Přihlásit se</a>
         </div>
-    </div>
-    
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Vítejte v aplikaci FocusBox</h1>
-                <p>Vaše nová cesta k lepšímu time-managementu.</p>
-                <a href="register.html" class="btn-primary">Začněte ještě dnes</a>
-            </div>
-        </section>
+    </nav>
 
-        <section class="features">
-            <h2>Proč si vybrat FocusBox?</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <h3>To-Do List</h3>
-                    <p>Organizujte své úkoly efektivně a přehledně.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Whiteboard</h3>
-                    <p>Přetahujte karty, přidávejte tagy a plánujte kreativně.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Kategorizace</h3>
-                    <p>Oddělte osobní a pracovní úkoly pomocí barevných tagů.</p>
-                </div>
+    <section class="hero">
+        <div class="hero-container">
+            <img src="img/mockupfocus.png" alt="Ukázka aplikace FocusBox v telefonu" class="hero-image">
+            <div class="hero-text">
+                <h2>Soustřeďte se. Dosáhněte víc.</h2>
+                <p>FocusBox vám pomáhá organizovat váš čas a zvýšit produktivitu. Stáhněte si naši aplikaci a zjednodušte si život.</p>
+                <a href="register.html"><button>Registrovat se</button></a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta">
-            <h2>Připraveni začít?</h2>
-            <p>Zaregistrujte se a získejte přístup ke všem funkcím FocusBoxu!</p>
-            <a href="register.html" class="btn-primary">Registrovat se</a>
-        </section>
-    </main>
+    <section id="features" class="features">
+        <div class="feature">
+            <i class="fa-solid fa-calendar"></i>
+            <h3>Inteligentní Plánování</h3>
+            <p>Snadno si naplánujte svůj den a získejte jasný přehled o prioritách.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Časovače a Připomínky</h3>
+            <p>Pomocí našich nástrojů pro správu času zvládnete více práce za kratší dobu.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3>Analýza Produktivity</h3>
+            <p>Sledujte svůj pokrok a získejte užitečné statistiky o vašem čase.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Co říkají naši uživatelé</h2>
+        <div class="testimonial">
+            <p>"FocusBox změnil způsob, jakým organizuji své úkoly. Nikdy jsem nebyl tak produktivní!"</p>
+            <strong>- Jana Nováková</strong>
+        </div>
+        <div class="testimonial">
+            <p>"Díky FocusBoxu jsem získal lepší přehled o svém čase a dosáhl svých cílů rychleji."</p>
+            <strong>- Petr Dvořák</strong>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Připraveni začít?</h2>
+        <p>Stáhněte si FocusBox ještě dnes a zlepšete svou produktivitu!</p>
+        <a href="register.html"><button>Registrovat se</button></a>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Kontaktuj nás</h2>
+        <p>Máte otázky? Pošlete nám zprávu a my se vám co nejdříve ozveme.</p>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Jméno:</label>
+                <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Váš e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Zpráva:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Vaše zpráva" required></textarea>
+            </div>
+            <button type="submit">Odeslat</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2024 FocusBox. Všechna práva vyhrazena.</p>
-</footer>
-<script src="scripts/navbar.js"></script>
+        <p>&copy; 2025 FocusBox. Všechna práva vyhrazena. <a href="#">Podmínky použití</a></p>
+    </footer>
+<script src="./scripts/nav.js"></script>
 </body>
 
 </html>
