@@ -31,6 +31,7 @@ button {
     background: #42a5f5;
     color: white;
     padding: 10px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -48,6 +49,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
 
 /* Breakpoints */
 @media (max-width: 1024px) {
